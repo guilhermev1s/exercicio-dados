@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página inicial</title>
+</head>
+
+<body>
+    <!--1) Faça um script para solicitar o nome do usuário. Exiba uma mensagem de boas vindas com o nome
+    informado. Use o método prompt() dentro da tag <script></script> da página html:-->
+    <script>
+        var nome;
+        nome = prompt("qual seu nome?");
+        alert("Seja bem-vindo!, " + nome)
+    </script>
+
+    <h1>Exercício 1</h1>
+
+    <!--2) Utilize uma estrutura de controle para descobrir se o valor de sua idade é par ou ímpar.-->
+
+    <script>
+        let idade = 23;
+
+        if (idade % 2 === 0) {
+            console.log("A idade é par.");
+        } else {
+            console.log("A idade é ímpar.");
+        } 
+    </script>
+
+    <!--3) Faça um laço para imprimir todos os anos, do ano atual até o ano de seu nascimento.-->
+    <script>
+        for (let ano = 2024; ano >= 2001; ano--) {
+            console.log(ano);
+        }
+    </script>
+
+    <!--4) Peça ao usuário para digitar idades de 10 pessoas. Exiba quantas pessoas são maior de idade (18 anos) e
+quantas são menores.-->
+    <script>
+        let maioresIdade = 0;
+        let menoresIdade = 0;
+
+        for (let i = 1; i <= 10; i++) {
+            let idade = parseInt(prompt("Digite a idade da pessoa " + i + ":"));
+
+            if (idade >= 18) {
+                maioresIdade++;
+            } else {
+                menoresIdade++;
+            }
+        }
+
+        console.log("Pessoas maiores de idade: " + maioresIdade);
+        console.log("Pessoas menores de idade: " + menoresIdade);
+    </script>
+
+    <!--5) Declare as seguintes propriedades (variáveis) em uma classe aluno (nome, idade e peso), instancie um
+objeto com seu nome. Depois acesse e altere os valores correspondentes aos seus tipos: nome(string),
+idade(inteiro), peso(double). Apresente na console o conteúdo de cada propriedade do objeto.-->
+<script>
+    class Aluno {
+    constructor(nome, idade, peso) {
+        this.nome = nome;
+        this.idade = idade;
+        this.peso = peso;
+    }
+}
+
+// Instanciando um objeto Aluno com seu nome
+let meuAluno = new Aluno("Guilherme", 23, 70.5);
+
+console.log("Nome: " + meuAluno.nome);
+console.log("Idade: " + meuAluno.idade);
+console.log("Peso: " + meuAluno.peso);
+
+// Acessando e alterando os valores das propriedades
+meuAluno.nome = "Gustavo";
+meuAluno.idade = 30;
+meuAluno.peso = 75.3;
+
+// Exibindo o conteúdo de cada propriedade do objeto na console
+console.log("Nome: " + meuAluno.nome);
+console.log("Idade: " + meuAluno.idade);
+console.log("Peso: " + meuAluno.peso);
+</script>
+
+</body>
+
+</html>
